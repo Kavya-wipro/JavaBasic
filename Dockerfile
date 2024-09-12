@@ -4,7 +4,7 @@ WORKDIR /usr/local/tomcat
 RUN pwd && ls
 COPY */webapp.war /usr/local/tomcat/webapps
 COPY . /usr/local/tomcat/maven_project
-WORKDIR /usr/local/tomcat/maven_project
+WORKDIR /usr/local/tomcat/maven_project/JavaBasic
 RUN pwd && ls -la
 RUN ls -la /usr/local/tomcat/maven_project
 RUN mvn test
