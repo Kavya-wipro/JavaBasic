@@ -1,6 +1,6 @@
 FROM tomcat:latest
 RUN apt-get update && apt-get install -y maven
-WORKDIR /usr/local/tomcat/webapps
+WORKDIR /usr/local/tomcat
 RUN pwd && ls
 COPY */webapp.war /usr/local/tomcat/webapps
 COPY . /usr/local/tomcat/maven_project
