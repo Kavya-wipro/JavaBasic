@@ -7,4 +7,5 @@ COPY . /usr/local/tomcat/maven_project
 WORKDIR /usr/local/tomcat/maven_project
 RUN mvn test
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+RUN ls -la /usr/local/tomcat/maven_project
 CMD ["catalina.sh", "run"]
