@@ -25,6 +25,7 @@
     <version>2.22.2</version>
     <configuration>
          <argLine>${harnessArgLine} @{argLine} </argLine>
+         <reportsDirectory>${project.build.directory}/custom-reports</reportsDirectory>
     </configuration>
   </plugin>
 
