@@ -6,6 +6,7 @@ COPY */webapp.war /usr/local/tomcat/webapps
 COPY . /usr/local/tomcat/maven_project
 WORKDIR /usr/local/tomcat/maven_project/JavaBasic
 RUN pwd && ls -la
+RUN ls -l 
 RUN ls -la /usr/local/tomcat/maven_project
 RUN mvn -X test
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
