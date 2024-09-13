@@ -9,4 +9,8 @@ RUN pwd && ls -la
 RUN ls -la /usr/local/tomcat/maven_project
 RUN mvn test
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+RUN ls -l target/surefire-reports/
+RUN ls -l target/failsafe-reports/
+RUN ls -l target/custom-reports/
+RUN ls -l */*-reports/
 CMD ["catalina.sh", "run"]
