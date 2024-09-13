@@ -15,7 +15,4 @@ RUN ls -l server/
 RUN ls -l server/target/
 RUN ls -l server/*/*-reports/
 RUN ls -l server/target/surefire-reports/
-RUN ls -l server/target/failsafe-reports/
-RUN ls -l server/target/custom-reports/
-RUN ls -l */*/*-reports/
 CMD ["catalina.sh", "run"]
