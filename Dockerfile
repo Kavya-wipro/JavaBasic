@@ -4,11 +4,10 @@ WORKDIR /usr/local/tomcat
 RUN pwd && ls
 COPY */webapp.war /usr/local/tomcat/webapps
 COPY . /harness/JavaBasic
-RUN ls -l /harness
 WORKDIR /harness/JavaBasic
 RUN pwd && ls -la
 RUN ls -l /harness/JavaBasic/
-RUN mvn -X test
+RUN rm -rf /root/.m2/repository && mvn -X test -U
 RUN ls -l server/target/surefire-reports/
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
 
