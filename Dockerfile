@@ -3,8 +3,8 @@ RUN apt-get update && apt-get install -y maven
 WORKDIR /usr/local/tomcat
 RUN pwd && ls
 COPY */webapp.war /usr/local/tomcat/webapps
-COPY . /usr/local/tomcat/maven_project
-WORKDIR /usr/local/tomcat/maven_project/JavaBasic
+COPY . /harness
+WORKDIR /harness/JavaBasic
 RUN pwd && ls -la
 RUN mvn -X test
 RUN ls -l server/target/surefire-reports/
