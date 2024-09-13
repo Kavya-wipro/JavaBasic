@@ -56,9 +56,8 @@
         <configuration>
            <forkMode>never</forkMode>
            <argLine>${harnessArgLine} @{argLine} </argLine>
-           <reportsDirectory>${project.build.directory}/custom-reports</reportsDirectory>
-    </configuration>
-  </plugin>
+       </configuration>
+      </plugin>
 
         </plugins>
 
