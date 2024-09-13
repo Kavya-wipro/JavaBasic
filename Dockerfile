@@ -11,6 +11,8 @@ RUN ls -la /usr/local/tomcat/maven_project
 RUN mvn -X test
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
 RUN ls -l 
+RUN ls -l server/
+RUN ls -l server/tagrget/
 RUN ls -l server/*/*-reports/
 RUN ls -l server/target/surefire-reports/
 RUN ls -l server/target/failsafe-reports/
