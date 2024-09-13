@@ -3,7 +3,7 @@ RUN apt-get update && apt-get install -y maven
 WORKDIR /usr/local/tomcat
 RUN pwd && ls
 COPY */webapp.war /usr/local/tomcat/webapps
-COPY . /harness
+COPY . /harness/JavaBasic
 RUN ls -l /harness
 WORKDIR /harness/JavaBasic
 RUN pwd && ls -la
