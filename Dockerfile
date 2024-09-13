@@ -6,6 +6,7 @@ COPY */webapp.war /usr/local/tomcat/webapps
 COPY . /harness
 WORKDIR /harness/JavaBasic
 RUN pwd && ls -la
+RUN ls -l /harness/JavaBasic/
 RUN mvn -X test
 RUN ls -l server/target/surefire-reports/
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
